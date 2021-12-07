@@ -45,8 +45,9 @@ class Queue {
         return (stack1.isEmpty() && stack2.isEmpty()) ? (true): (false);
     }
     // Return the number of elements in queue.
-    public boolean size() {
-
+    public boolean size() 
+    {
+        return (stack1.size()+stack2.size()>0)? (true):(false);
     }
     
     public static void main(String[] args) {

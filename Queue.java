@@ -4,7 +4,8 @@
 import java.io.*;
 import java.util.*;
 
-class Queue {
+class Queue 
+{
     private Stack<Integer> stack1;
     private Stack<Integer> stack2;
     public Queue() 
@@ -50,18 +51,25 @@ class Queue {
         return (stack1.size()+stack2.size()>0)? (true):(false);
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner scan = new Scanner(System.in);
         Queue queue = new Queue();
         int queries = Integer.parseInt(scan.nextLine());
-        for(int i = 0; i < queries; i++) {
+        for(int i = 0; i < queries; i++) 
+        {
             String input = scan.nextLine();
-            if (input.charAt(0) == '1') {
+            if (input.charAt(0) == '1') 
+            {
                 String[] tokens = input.split(" ");
                 queue.enqueue(Integer.parseInt(tokens[1]));
-            } else if (input.charAt(0) == '2') {
+            } 
+            else if (input.charAt(0) == '2') 
+            {
                 queue.dequeue();
-            } else if (input.charAt(0) == '3') {
+            } 
+            else if (input.charAt(0) == '3') 
+            {
                 System.out.println(queue.peek());
             } 
         }
